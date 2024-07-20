@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <link rel="stylesheet" href="../css/studentmain.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+    
+    <style>
+        .header-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-right: 3px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;
+    font-size: 17px;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #3a6cf4;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo"><img src="../images/WhatsApp Image 2024-02-28 at 12.06.09_416c2dbd.png" alt="Logo"></a>
+            <nav class="navigation">
+                <a href="#">Store</a>
+                <a href="#">Home</a>
+            </nav>
+        </div>
+    </header>
+    <section class="main">
+        <h1>Add a New Book</h1>
+    </section>
+    <div class="container">
+        <main>
+            <form action="/addbook" method="post" enctype="multipart/form-data">
+                <div class="row mb-3">
+                    <div class="col-md-5">
+                        <label for="book_name" class="form-label">Book Name</label>
+                        <input type="text" class="form-control" id="book_name" name="book_name" required>
+                    </div>
+                    <div class="col-md-5">
+                        <label for="author_name" class="form-label">Author Name</label>
+                        <input type="text" class="form-control" id="author_name" name="author_name" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-3">
+                        <label for="Language" class="form-label">Language</label>
+                        <input type="text" class="form-control" id="Language" name="Language" required>
+                    </div>
+                    <div class="col-md-5">
+                        <label for="publishing_year" class="form-label">Publishing Year</label>
+                        <input type="text" class="form-control" id="publishing_year" name="publishing_year" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-5">
+                        <label for="no_page" class="form-label">No Of Pages</label>
+                        <input type="number" class="form-control" id="no_page" name="no_page" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="type" class="form-label">Type</label>
+                        <input type="text" class="form-control" id="type" name="type" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-9">
+                        <label for="dis" class="form-label">Description</label>
+                        <textarea class="form-control" id="dis" name="dis" rows="3" required></textarea>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-5">
+                        <label for="book" class="form-label">Book PDF</label>
+                        <input type="file" class="form-control" id="book" name="book" accept=".pdf" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="img" class="form-label">Image</label>
+                        <input type="file" class="form-control" id="img" name="img" accept="image/*" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </main>
+    </div>
+    <footer class="footer">
+        <p class="footer-title">Copyrights © <span>Omar Khaled</span></p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

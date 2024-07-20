@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Section Layout</title>
+    <link rel="stylesheet" href="../css/studentmain.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="../images/WhatsApp Image 2024-02-28 at 12.06.09_416c2dbd.png" alt=""></a>
+        <nav class="navigation">
+            <form action="/store">
+            <a href="/store">Store</a>
+            <a href="#">Home</a>
+            <label><%= username%></label>
+            <a href="/logout">logout</a>
+        </nav>
+    </header>
+    <section class="main">
+        <h1></h1>
+        <a href="#" class="buts">Start Learning</a>
+    </section>
+    <div class="container">
+        <main>
+            <% enrolledBooksDetails.forEach(book => { %>
+            <div class="card">
+                <div class="img-container">
+                    <img src="<%= book.img %>" alt="<%= book.title %> Image">
+                </div>
+                <div class="description">
+                    <h2><%= book.book_name %></h2>
+    
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+            <% }); %>
+        </main>
+    </div>
+    <footer class="footer">
+        <p class="footer-title">Copyrights © <span>Your Name</span></p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

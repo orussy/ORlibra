@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .toolbar {
+            display: flex;
+            gap: 10px;
+        }
+        iframe {
+            flex: 1;
+            width: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PDF Viewer</h1>
+        <div class="toolbar">
+            <button onclick="zoomIn()">Zoom In</button>
+            <button onclick="zoomOut()">Zoom Out</button>
+            <button onclick="downloadPDF()">Download</button>
+        </div>
+    </header>
+    <iframe src="https://firebasestorage.googleapis.com/v0/b/corpro-4ef2e.appspot.com/o/Noor-Book.com%20%20%D8%AA%D8%B9%D9%84%D9%85%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A8%D8%A7%D9%86%D9%8A%D8%A9.pdf?alt=media&token=75c3318f-7b72-4732-ad74-82f732db50d3"></iframe>
+
+    <script>
+        function zoomIn() {
+            // Implement zoom-in functionality
+        }
+        function zoomOut() {
+            // Implement zoom-out functionality
+        }
+        function downloadPDF() {
+            // Implement download functionality
+        }
+    </script>
+</body>
+</html>

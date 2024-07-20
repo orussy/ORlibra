@@ -1,0 +1,169 @@
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 50px;
+}
+
+.logo img{
+   width: 60px;
+}
+
+/* Navigation styling */
+.navigation {
+
+    display: flex;
+    justify-content: flex-end; /* Align links to the right */
+    align-items: center;
+    margin-right: 95px; /* Adjust margin as needed */
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333; /* Change color as per your design */
+    font-size: 16px; /* Adjust font size as needed */
+    margin-left: 20px; /* Add space between links */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+.navigation a:hover {
+    color: #3a6cf4; /* Change color on hover */
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/Screenshot (5).png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main h1 {
+    color: #fff;
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.buts {
+    margin-top: 20px;
+    background-color: #f7b500;
+    border-radius: 23px;
+    padding: 0.9rem 1rem;
+    border: none;
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.3s ease;
+}
+
+.buts:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    padding: 2rem;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+    max-width: 300px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.img-container {
+    width: 100%;
+    height: 200px; /* Adjust the height as per your design */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.description {
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer {
+    background-color: #000016;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-title {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.footer-title span {
+    color: #3a6cf4;
+}
+
+.social-icons a {
+    font-size: 1.3em;
+    color: #fff;
+    padding: 0 12px;
+}
+.pad{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding-bottom: 30px;
+}
+.pad a{
+    text-decoration: none;
+    color: white;
+    background-color: #3a6cf4;
+    border: solid #3a6cf4;
+    display: inline-flex;
+    padding: 10px;
+    margin-right: -10px;
+    transition: 0.4s ease;
+}
+.pad a:hover{
+    transform: scale(1.1);
+}

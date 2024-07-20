@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <link rel="stylesheet" href="/css/studentmain.css">
+    <style>
+        .da{
+            padding-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="../images/WhatsApp Image 2024-02-28 at 12.06.09_416c2dbd.png" alt=""></a>
+        <nav class="navigation">
+            <a href="#">Store</a>
+            <a class="da" href="#">Home </a>
+            <label><%= username%></label>
+            <a href="/logout">logout</a>
+        </nav>
+    </header>
+    <section class="main">
+        <h1>In the world of books, magic is real.</h1>
+    
+    </section>
+    <div class="container">
+        <main>
+            <% cor.forEach(course => { %>
+                <div class="card">
+                    <div class="img-container">
+                        <img src="<%= course.img %>" alt="Image" >
+                    </div>
+                    <div class="description">
+
+                        <h4 class="datr"><%= course.book_name %></h4>
+                        <p class="datr"><%= course.author_name %></p>
+                        <p class="datr"><%= course.rate %> <a href="./<%=course._id %>">Open</a></p>
+                        
+                    </div>
+                </div>
+            <% }) %>
+        </main>
+    </div>
+</body>
+</html>

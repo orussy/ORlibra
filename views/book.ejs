@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Section Layout</title>
+    <link rel="stylesheet" href="../css/studentmain.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .p-30 {
+            padding: 30px;
+        }
+        .media {
+            display: flex;
+            align-items: flex-start;
+        }
+        .media-left {
+            margin-right: 20px;
+        }
+        .book_page_img_container {
+            background: rgba(178, 190, 195, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        .media-object {
+            max-width: 100%;
+            height: auto;
+        }
+        .qr_img_container {
+            margin-top: 30px;
+        }
+        .qr_img {
+            height: 70px;
+            width: 70px;
+        }
+        .media-body {
+            flex: 1;
+        }
+        .media-heading {
+            font-size: 20px;
+        }
+        .rating-top-to-img {
+            cursor: pointer;
+        }
+        .book_data_table {
+            margin-top: 20px;
+            width: 100%;
+        }
+        .book_data_table td {
+            padding: 5px 10px;
+        }
+        .add-btns {
+            margin-top: 20px;
+        }
+         .fa {
+  font-size: 25px;
+}
+
+.ratebar .checked {
+  color: orange;
+}
+.pdf {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+    .pdf {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="../images/WhatsApp Image 2024-02-28 at 12.06.09_416c2dbd.png" alt="Logo"></a>
+        <nav class="navigation">
+            <a href="#">Store</a>
+            <a href="/home">Home</a>
+            <label><%=username%></label>
+        </nav>
+    </header>
+    <section class="main">
+        <h1>In the world of books, magic is real.</h1>
+        <a href="#" class="buts">Start Learning</a>
+    </section>
+    <div class="container p-30">
+        <div class="media">
+            <div class="media-left">
+                <div class="book_page_img_container_parent">
+                    <div class="book_page_img_container">
+                        <img src="<%= bookdata.img %>" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="media-body">
+                <h2 itemprop="name" class="under_img_title media-heading f-s-20"><%= bookdata.book_name %></h2>
+                <div class="book_rating m-b-5 rating-top-to-img">
+                    <div class="ratings_stars">
+
+                    </div>
+                    
+                </div>
+                <div class="naskh-r f-s-20">
+                    <table class="book_data_table">
+                        <tbody>
+                            <tr>
+                                <td><span>Author<span class="pull-left">:</span></span></td>
+                                <td itemprop="author"><span itemprop="name" id="book-writer"><%= bookdata.author_name %></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Language<span class="pull-left">:</span></span></td>
+                                <td><span id="book-category"><%= bookdata.language %></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Publishing Year<span class="pull-left">:</span></span></td>
+                                <td><span><%= bookdata.publishing_year %></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Number of Pages<span class="pull-left">:</span></span></td>
+                                <td itemprop="numberOfPages"><%= bookdata.no_page %></td>
+                            </tr>
+                            
+                                <tr>
+                                    <td><span>Description<span class="pull-left">:</span></span></td>
+                                    <td><%= bookdata.description %></td>
+                                </tr>
+                                <tr>
+                                    <td><span>rate <span class="pull-left">:</span></span></td>
+                                    <div class="ratebar">
+                                    <td><span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span></td>
+                                        </div>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="m-t-20 add-btns">
+                    <button type="button" class="btn btn-default noor-btn" onclick="scroll_to_book_download();"><i class="fa fa-download"></i> Download</button>
+                    <button type="button" class="btn btn-default noor-btn"><i class="fa fa-share-alt"></i> Share</button>
+                    <form action="/rolledbook" method="post"><input type="hidden" name="bookname" value="<%=  bookdata._id %>"><button type="button" class="btn btn-default noor-btn">put in my library</button></form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <iframe class="pdf" id="inlineFrameExample" 
+    title="Inline Frame Example" 
+    width="1000px" 
+    height="600px" 
+    src="<%=bookdata.book_url%>"> 
+</iframe> 
+    <footer class="footer">
+        <p class="footer-title">Copyrights © <span>Your Name</span></p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
